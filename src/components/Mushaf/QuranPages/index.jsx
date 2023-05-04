@@ -18,7 +18,7 @@ const QuranPages = ({
   handleDisplayAyahMenu = () => {},
 }) => {
   // console.log('renderer', initialJuz, initialPage)
-  const [activeJuz, setActiveJuz] = useState(30);
+  const [activeJuz, setActiveJuz] = useState(25);
   const [highlightedAyah, setHighlightedAyah] = useState(highlightedAyahValue);
 
   const [pages, setPages] = useState([
@@ -58,8 +58,8 @@ const QuranPages = ({
   const { playerState, dispatch: playerDispatch } = usePlayerProvider();
 
   // START – DEVELOPMENT VARIABLES
-  // const [firstWordCovers, setFirstWordCovers] = useState({});
-  // const [invisibleCovers, setInvisibleCovers] = useState({});
+  const [firstWordCovers, setFirstWordCovers] = useState({});
+  const [invisibleCovers, setInvisibleCovers] = useState({});
   // END – DEVELOPMENT VARIABLES
 
   // Active Ayah
@@ -139,7 +139,9 @@ const QuranPages = ({
   useEffect(() => {
     if (activeJuz) {
       // console.log(ContentMapper()[String(activeJuz)]);
-      setContent(ContentMapper()[String(activeJuz)].pages);
+      setContent(ContentMapper()[activeJuz].pages);
+      //console.log(Object.keys(ContentMapper()[String(activeJuz)].pages));
+      console.log(activeJuz);
     }
   }, [activeJuz]);
 
@@ -174,26 +176,26 @@ const QuranPages = ({
   }, [juzNo]);
 
   // START – DEVELOPMENT VARIABLES
-  // useEffect(() => {
-  //   if (currentContent) {
-  //     const newFirstWordCovers = currentContent
-  //       .map((ayah) => {
-  //         return ayah.covers["firstWord"];
-  //       })
-  //       .reduce((acc, cur) => {
-  //         return [...acc, ...cur];
-  //       }, []);
-  //     setFirstWordCovers(newFirstWordCovers);
-  //     const newInvisibleCovers = currentContent
-  //       .map((ayah) => {
-  //         return ayah.covers["invisible"];
-  //       })
-  //       .reduce((acc, cur) => {
-  //         return [...acc, ...cur];
-  //       }, []);
-  //     setInvisibleCovers(newInvisibleCovers);
-  //   }
-  // }, [currentContent]);
+  useEffect(() => {
+    if (currentContent) {
+      const newFirstWordCovers = currentContent
+        .map((ayah) => {
+          return ayah.covers["firstWord"];
+        })
+        .reduce((acc, cur) => {
+          return [...acc, ...cur];
+        }, []);
+      setFirstWordCovers(newFirstWordCovers);
+      const newInvisibleCovers = currentContent
+        .map((ayah) => {
+          return ayah.covers["invisible"];
+        })
+        .reduce((acc, cur) => {
+          return [...acc, ...cur];
+        }, []);
+      setInvisibleCovers(newInvisibleCovers);
+    }
+  }, [currentContent]);
   // END – DEVELOPMENT VARIABLES
 
   return (
@@ -254,8 +256,8 @@ const QuranPages = ({
               activePage={activePage}
               highlightedAyah={highlightedAyah}
               // START – DEVELOPMENT VARIABLES
-              // invisibleCovers={invisibleCovers}
-              // firstWordCovers={firstWordCovers}
+              invisibleCovers={invisibleCovers}
+              firstWordCovers={firstWordCovers}
               // END – DEVELOPMENT VARIABLES
             />
           );

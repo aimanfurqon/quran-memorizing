@@ -6,17 +6,15 @@
     "orientation": "portrait",
     "icon": "./src/assets/icon.png",
     "userInterfaceStyle": "light",
+    "updates": {
+      "fallbackToCacheTimeout": 0
+    },
     "splash": {
       "image": "./assets/splash.png",
       "resizeMode": "contain",
       "backgroundColor": "#ffffff"
     },
-    "updates": {
-      "fallbackToCacheTimeout": 0
-    },
-    "assetBundlePatterns": [
-      "**/*"
-    ],
+    "assetBundlePatterns": ["**/*"],
     "ios": {
       "supportsTablet": true,
       "bundleIdentifier": "com.aoohan.quranmemorizing"
@@ -26,7 +24,8 @@
         "foregroundImage": "./src/assets/adaptive-icon.png",
         "backgroundColor": "#FFFFFF"
       },
-      "package": "com.aoohan.quranmemorizing"
+      "package": "com.aoohan.quranmemorizing",
+      "versionCode": 1
     },
     "web": {
       "favicon": "./assets/favicon.png"
@@ -35,6 +34,7 @@
       "eas": {
         "projectId": "f1dc7300-8df1-48ff-964b-8e8fa5cf7177"
       }
-    }
+    },
+    "owner": "quran-memorizing"
   }
 }
