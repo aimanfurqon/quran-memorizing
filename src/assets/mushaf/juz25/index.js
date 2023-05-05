@@ -7,7 +7,7 @@ export default Data = () => ({
       content: require("assets/mushaf/juz25/content/1.json"),
     },
     2: {
-      image: require("assets/mushaf/juz25/pages/482.png"),
+      image: require("assets/mushaf/juz25/pages/482m.png"),
       content: require("assets/mushaf/juz25/content/2.json"),
     },
     3: {
@@ -15,7 +15,7 @@ export default Data = () => ({
       content: require("assets/mushaf/juz25/content/3.json"),
     },
     4: {
-      image: require("assets/mushaf/juz25/pages/484.png"),
+      image: require("assets/mushaf/juz25/pages/484m.png"),
       content: require("assets/mushaf/juz25/content/4.json"),
     },
     5: {
@@ -23,7 +23,7 @@ export default Data = () => ({
       content: require("assets/mushaf/juz25/content/5.json"),
     },
     6: {
-      image: require("assets/mushaf/juz25/pages/486.png"),
+      image: require("assets/mushaf/juz25/pages/486m.png"),
       content: require("assets/mushaf/juz25/content/6.json"),
     },
     7: {
@@ -63,7 +63,7 @@ export default Data = () => ({
       content: require("assets/mushaf/juz30/content/15.json"),
     },
     16: {
-      image: require("assets/mushaf/juz25/pages/496.png"),
+      image: require("assets/mushaf/juz25/pages/496m.png"),
       content: require("assets/mushaf/juz25/content/16.json"),
     },
     17: {
