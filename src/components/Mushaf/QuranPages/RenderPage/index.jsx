@@ -45,6 +45,9 @@ const RenderPage = ({
   // START – DEVELOPMENT VARIABLES
   firstWordCovers = [],
   invisibleCovers = [],
+  blockingCovers = [],
+  blocking1Covers = [],
+  blocking2Covers = [],
   // END – DEVELOPMENT VARIABLES
 }) => {
   return (
@@ -86,6 +89,9 @@ const RenderPage = ({
             // START – DEVELOPMENT VARIABLES
             firstWords={firstWordCovers}
             invisibles={invisibleCovers}
+            blockings={blockingCovers}
+            blockings1={blocking1Covers}
+            blockings2={blocking2Covers}
             // END – DEVELOPMENT VARIABLES
           />
         </ImageBackground>

@@ -3,7 +3,7 @@ export default Data = () => ({
   metadata: require("assets/mushaf/juz25/content/data.json"),
   pages: {
     1: {
-      image: require("assets/mushaf/juz25/pages/481m.png"),
+      image: require("assets/mushaf/juz25/pages/481.png"),
       content: require("assets/mushaf/juz25/content/1.json"),
     },
     2: {

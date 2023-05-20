@@ -5,6 +5,10 @@ const AyahCovers = ({
   // START – DEVELOPMENT VARIABLES
   firstWords = [],
   invisibles = [],
+  blockings = [],
+  blockings1 = [],
+  blockings2 = [],
+
   // END – DEVELOPMENT VARIABLES
 }) => {
   return (
@@ -18,7 +22,7 @@ const AyahCovers = ({
       }}
     >
       {/* START – USED DURING DEVELOPMENT ONLY */}
-      {firstWords.length > 0 &&
+      {/* {firstWords.length > 0 &&
         firstWords.map((item) => {
           const { top, right, height, width } = item;
           return (
@@ -51,7 +55,8 @@ const AyahCovers = ({
               }}
             />
           );
-        })}
+        })} */}
+
       {/* END – USED DURING DEVELOPMENT ONLY*/}
       {covers.length > 0 &&
         covers.map((item) => {
@@ -66,6 +71,57 @@ const AyahCovers = ({
                 width: `${width}%`,
                 height: `${height}%`,
                 backgroundColor: "#f8f5e9",
+              }}
+            />
+          );
+        })}
+      {blockings.length > 0 &&
+        blockings.map((item) => {
+          const { top, right, height, width } = item;
+          return (
+            <View
+              key={`${top}-${right}`}
+              style={{
+                position: "absolute",
+                top: `${top}%`,
+                right: `${right}%`,
+                width: `${width}%`,
+                height: `${height}%`,
+                backgroundColor: "rgba(174, 175, 114, 0.2)",
+              }}
+            />
+          );
+        })}
+      {blockings1.length > 0 &&
+        blockings1.map((item) => {
+          const { top, right, height, width } = item;
+          return (
+            <View
+              key={`${top}-${right}`}
+              style={{
+                position: "absolute",
+                top: `${top}%`,
+                right: `${right}%`,
+                width: `${width}%`,
+                height: `${height}%`,
+                backgroundColor: "rgba(164, 114, 176, 0.2)",
+              }}
+            />
+          );
+        })}
+      {blockings2.length > 0 &&
+        blockings2.map((item) => {
+          const { top, right, height, width } = item;
+          return (
+            <View
+              key={`${top}-${right}`}
+              style={{
+                position: "absolute",
+                top: `${top}%`,
+                right: `${right}%`,
+                width: `${width}%`,
+                height: `${height}%`,
+                backgroundColor: "rgba(4, 59, 92, 0.2)",
               }}
             />
           );

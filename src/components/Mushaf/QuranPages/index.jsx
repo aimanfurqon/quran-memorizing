@@ -60,6 +60,10 @@ const QuranPages = ({
   // START – DEVELOPMENT VARIABLES
   const [firstWordCovers, setFirstWordCovers] = useState({});
   const [invisibleCovers, setInvisibleCovers] = useState({});
+  const [blockingCovers, setBlockingCovers] = useState({});
+  const [blocking1Covers, setBlocking1Covers] = useState({});
+  const [blocking2Covers, setBlocking2Covers] = useState({});
+
   // END – DEVELOPMENT VARIABLES
 
   // Active Ayah
@@ -139,9 +143,7 @@ const QuranPages = ({
   useEffect(() => {
     if (activeJuz) {
       // console.log(ContentMapper()[String(activeJuz)]);
-      setContent(ContentMapper()[activeJuz].pages);
-      //console.log(Object.keys(ContentMapper()[String(activeJuz)].pages));
-      console.log(activeJuz);
+      setContent(ContentMapper()[String(activeJuz)].pages);
     }
   }, [activeJuz]);
 
@@ -194,6 +196,30 @@ const QuranPages = ({
           return [...acc, ...cur];
         }, []);
       setInvisibleCovers(newInvisibleCovers);
+      const newBlockingCovers = currentContent
+        .map((ayah) => {
+          return ayah.covers["blocking"];
+        })
+        .reduce((acc, cur) => {
+          return [...acc, ...cur];
+        }, []);
+      setBlockingCovers(newBlockingCovers);
+      const newBlocking1Covers = currentContent
+        .map((ayah) => {
+          return ayah.covers["blocking1"];
+        })
+        .reduce((acc, cur) => {
+          return [...acc, ...cur];
+        }, []);
+      setBlocking1Covers(newBlocking1Covers);
+      const newBlocking2Covers = currentContent
+        .map((ayah) => {
+          return ayah.covers["blocking2"];
+        })
+        .reduce((acc, cur) => {
+          return [...acc, ...cur];
+        }, []);
+      setBlocking2Covers(newBlocking2Covers);
     }
   }, [currentContent]);
   // END – DEVELOPMENT VARIABLES
@@ -258,6 +284,9 @@ const QuranPages = ({
               // START – DEVELOPMENT VARIABLES
               invisibleCovers={invisibleCovers}
               firstWordCovers={firstWordCovers}
+              blockingCovers={blockingCovers}
+              blocking1Covers={blocking1Covers}
+              blocking2Covers={blocking2Covers}
               // END – DEVELOPMENT VARIABLES
             />
           );

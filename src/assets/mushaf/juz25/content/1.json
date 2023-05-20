@@ -71,6 +71,61 @@
           "width": 67,
           "height": 4.9
         }
+      ],
+      "blocking": [
+        {
+          "key": "41:47:1",
+          "top": 11.3,
+          "right": 2.1,
+          "width": 91.7,
+          "height": 25.47
+        },
+        {
+          "key": "41:47:1",
+          "top": 36.8,
+          "right": 2.1,
+          "width": 15.9,
+          "height": 5.1
+        }
+      ],
+      "blocking1": [
+        {
+          "key": "41:47:1",
+          "top": 36.8,
+          "right": 18,
+          "width": 75.8,
+          "height": 5.1
+        },
+        {
+          "key": "41:47:1",
+          "top": 41.9,
+          "right": 2.1,
+          "width": 91.8,
+          "height": 20.5
+        },
+        {
+          "key": "41:47:1",
+          "top": 62.5,
+          "right": 2.1,
+          "width": 7,
+          "height": 5
+        }
+      ],
+      "blocking2": [
+        {
+          "key": "41:47:1",
+          "top": 62.5,
+          "right": 9.1,
+          "width": 84.7,
+          "height": 5
+        },
+        {
+          "key": "41:47:1",
+          "top": 67.6,
+          "right": 2.1,
+          "width": 91.7,
+          "height": 20.6
+        }
       ]
     }
   },
@@ -125,7 +180,10 @@
           "width": 85,
           "height": 4.9
         }
-      ]
+      ],
+      "blocking": [{}],
+      "blocking1": [{}],
+      "blocking2": [{}]
     }
   },
   {
@@ -179,7 +237,10 @@
           "width": 9.8,
           "height": 5
         }
-      ]
+      ],
+      "blocking": [{}],
+      "blocking1": [{}],
+      "blocking2": [{}]
     }
   },
   {
@@ -275,7 +336,10 @@
           "width": 49,
           "height": 4.8
         }
-      ]
+      ],
+      "blocking": [{}],
+      "blocking1": [{}],
+      "blocking2": [{}]
     }
   },
   {
@@ -329,7 +393,10 @@
           "width": 91.7,
           "height": 4.8
         }
-      ]
+      ],
+      "blocking": [{}],
+      "blocking1": [{}],
+      "blocking2": [{}]
     }
   },
   {
@@ -383,7 +450,10 @@
           "width": 69,
           "height": 4.8
         }
-      ]
+      ],
+      "blocking": [{}],
+      "blocking1": [{}],
+      "blocking2": [{}]
     }
   },
   {
@@ -429,7 +499,10 @@
           "width": 70.7,
           "height": 4.9
         }
-      ]
+      ],
+      "blocking": [{}],
+      "blocking1": [{}],
+      "blocking2": [{}]
     }
   },
   {
@@ -483,7 +556,10 @@
           "width": 86,
           "height": 5
         }
-      ]
+      ],
+      "blocking": [{}],
+      "blocking1": [{}],
+      "blocking2": [{}]
     }
   }
 ]

@@ -50,7 +50,10 @@
           "width": 91.6,
           "height": 5
         }
-      ]
+      ],
+      "blocking": [{}],
+      "blocking1": [{}],
+      "blocking2": [{}]
     }
   },
   {
@@ -104,7 +107,10 @@
           "width": 30,
           "height": 4.9
         }
-      ]
+      ],
+      "blocking": [{}],
+      "blocking1": [{}],
+      "blocking2": [{}]
     }
   },
   {
@@ -167,7 +173,6 @@
           "width": 56,
           "height": 4.9
         },
-
         {
           "key": "42:18:2",
           "top": 31.8,
@@ -182,7 +187,10 @@
           "width": 86,
           "height": 5
         }
-      ]
+      ],
+      "blocking": [{}],
+      "blocking1": [{}],
+      "blocking2": [{}]
     }
   },
   {
@@ -215,7 +223,10 @@
           "width": 91.6,
           "height": 4.8
         }
-      ]
+      ],
+      "blocking": [{}],
+      "blocking1": [{}],
+      "blocking2": [{}]
     }
   },
   {
@@ -278,7 +289,6 @@
           "width": 86.1,
           "height": 4.9
         },
-
         {
           "key": "42:20:2",
           "top": 52.4,
@@ -293,7 +303,10 @@
           "width": 11.5,
           "height": 4.8
         }
-      ]
+      ],
+      "blocking": [{}],
+      "blocking1": [{}],
+      "blocking2": [{}]
     }
   },
   {
@@ -355,7 +368,6 @@
           "width": 74,
           "height": 4.8
         },
-
         {
           "key": "42:21:2",
           "top": 62.6,
@@ -369,6 +381,47 @@
           "right": 6.4,
           "width": 58.3,
           "height": 4.8
+        }
+      ],
+      "blocking": [
+        {
+          "key": "43:11:1",
+          "top": 11.3,
+          "right": 6.4,
+          "width": 91.6,
+          "height": 30.6
+        }
+      ],
+      "blocking1": [
+        {
+          "key": "43:11:1",
+          "top": 41.9,
+          "right": 6.4,
+          "width": 91.6,
+          "height": 15.3
+        },
+        {
+          "key": "43:11:1",
+          "top": 57.4,
+          "right": 6.4,
+          "width": 17.5,
+          "height": 5.1
+        }
+      ],
+      "blocking2": [
+        {
+          "key": "43:11:1",
+          "top": 57.4,
+          "right": 23.9,
+          "width": 74.1,
+          "height": 5.1
+        },
+        {
+          "key": "43:11:1",
+          "top": 62.5,
+          "right": 6.4,
+          "width": 91.6,
+          "height": 25.7
         }
       ]
     }
@@ -466,7 +519,10 @@
           "width": 86.2,
           "height": 5
         }
-      ]
+      ],
+      "blocking": [{}],
+      "blocking1": [{}],
+      "blocking2": [{}]
     }
   }
 ]
