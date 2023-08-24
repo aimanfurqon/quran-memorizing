@@ -58,6 +58,7 @@ const AyahCovers = ({
         })} */}
 
       {/* END – USED DURING DEVELOPMENT ONLY*/}
+
       {covers.length > 0 &&
         covers.map((item) => {
           const { top, right, height, width } = item;
@@ -75,6 +76,26 @@ const AyahCovers = ({
             />
           );
         })}
+
+      {/* {covers.length > 0 &&
+        covers.map((item) => {
+          const { top, right, height, width } = item;
+          return (
+            <View
+              key={`${top}-${right}`}
+              style={{
+                position: "absolute",
+                top: `${top}%`,
+                right: `${right}%`,
+                width: `${width}%`,
+                height: `${height}%`,
+                backgroundColor: "rgba(174, 175, 114, 0.2)",
+              }}
+            />
+          );
+        })} */}
+
+      {/* DEV2 - START */}
       {blockings.length > 0 &&
         blockings.map((item) => {
           const { top, right, height, width } = item;
@@ -126,6 +147,7 @@ const AyahCovers = ({
             />
           );
         })}
+      {/* DEV2 - END */}
     </View>
   );
 };

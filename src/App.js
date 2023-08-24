@@ -12,6 +12,8 @@ import InputBySurah from "screens/Onboarding/InputMemorization/InputBySurah";
 import PersonalizationConfig from "screens/Onboarding/PersonalizationConfig";
 import Notes from "screens/Notes";
 import Setting from "screens/Setting";
+import FirstHello from "screens/Onboarding/FirstHello";
+import FirstBoard from "./screens/FirstBoard";
 
 import Homepage from "screens/Homepage";
 import MemorizationProgress from "screens/Progress";
@@ -32,6 +34,14 @@ import { UserDataProvider, useUserData } from "context/UserDataContext";
 const Stack = createNativeStackNavigator();
 
 const App = () => {
+  // Penambahan Konfigurasi Tema
+  // const [currentTheme, setCurrentTheme] = useState("light");
+
+  // const toggleTheme = () => {
+  //   const newTheme = currentTheme === "light" ? "dark" : "light";
+  //   setCurrentTheme(newTheme);
+  // };
+
   const [loading, setLoading] = useState(true);
   const { _, dispatch } = useOnBoardingState();
   const { dispatch: userDispatch } = useUserData();
@@ -72,12 +82,14 @@ const App = () => {
     <NavigationContainer>
       {/* TODO: protect route based on personalization value */}
       <Stack.Navigator
-        initialRouteName="Homepage"
+        initialRouteName="FirstBoard"
         screenOptions={{
           headerShown: false,
         }}
       >
         {/* Onboarding Screen */}
+        {/* <Stack.Screen name="FirstHello" component={FirstHello} /> */}
+        <Stack.Screen name="FirstBoard" component={FirstBoard} />
         <Stack.Screen name="Welcome" component={WelcomeScreen} />
         <Stack.Screen name="InputMemorization" component={InputMemorization} />
         <Stack.Screen

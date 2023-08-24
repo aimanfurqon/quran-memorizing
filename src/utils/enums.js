@@ -1,4 +1,5 @@
 export const VISIBILITY_MODE = ["all", "firstWord", "invisible"];
+export const BLOCK_MODE = ["all", "blocking", "blocking1", "blocking2"];
 
 export const AVAILABLE_QARI_NAMES = {
   alafasy: {

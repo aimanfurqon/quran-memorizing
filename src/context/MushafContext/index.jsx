@@ -1,6 +1,6 @@
 import { useContext, createContext, useReducer, useEffect } from "react";
 import { TikrarDuration } from "../../utils/constants";
-import { VISIBILITY_MODE } from "../../utils/enums";
+import { BLOCK_MODE, VISIBILITY_MODE } from "../../utils/enums";
 import { useUserData } from "../UserDataContext";
 
 const MushafContext = createContext({});
@@ -18,11 +18,18 @@ const initialMushafState = {
   // Normal Setting
   ayahVisibility: VISIBILITY_MODE[1],
   visibilityMode: VISIBILITY_MODE[0],
+
+  block0mode: BLOCK_MODE[0],
+  blockmode: BLOCK_MODE[1],
+  block1mode: BLOCK_MODE[2],
+  block2mode: BLOCK_MODE[3],
+
   // --First Word Development--
   // visibilityMode: VISIBILITY_MODE[1]
   // Invisible Development
   // visibilityMode: VISIBILITY_MODE[2]
   // --------------------------
+
   content: {
     juz: null,
     verses: [],
@@ -55,6 +62,12 @@ const MushafStateReducer = (state, { action, payload }) => {
       return {
         ...state,
         timerState: "iddle",
+      };
+
+    case "TOGGLE_COLOR_MODE":
+      return {
+        ...state,
+        block0mode: state.block0mode === "all" ? state.block1mode : "all",
       };
 
     case "TOGGLE_VIEW_MODE":

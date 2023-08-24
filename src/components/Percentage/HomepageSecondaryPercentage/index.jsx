@@ -2,6 +2,8 @@ import { Text, View, TouchableOpacity } from "react-native";
 import { LinearGradient } from "expo-linear-gradient";
 import { showMessage } from "react-native-flash-message";
 
+const availableJuz = [25, 26, 27, 28, 29, 30];
+
 const HomepageSecondaryPercentage = ({
   style,
   memorized,
@@ -13,7 +15,7 @@ const HomepageSecondaryPercentage = ({
     <TouchableOpacity
       onPress={() => {
         const target = juz.split(" ")[1];
-        if (Number(target) !== 30) {
+        if (Number(target) !== 25) {
           showMessage({
             message: "Halaman yang diminta belum tersedia saat ini.",
             type: "warning",
