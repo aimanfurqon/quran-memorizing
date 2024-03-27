@@ -82,7 +82,7 @@ const App = () => {
     <NavigationContainer>
       {/* TODO: protect route based on personalization value */}
       <Stack.Navigator
-        initialRouteName="FirstBoard"
+        initialRouteName="Homepage"
         screenOptions={{
           headerShown: false,
         }}
